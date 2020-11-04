@@ -1,0 +1,19 @@
+/* Variables */
+
+:root {
+    --primary-color: #81B3D2;
+    --primary-hover: #669EC0;
+    --primary-active: #5496BD;
+    --accent-color: #766357;
+    --accent-hover: #604E43;
+    --accent-active: #503E33;
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --text-color: #333333;
+    --active-text: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+    width: 1920px;
+    margin: 0 auto;
+}
