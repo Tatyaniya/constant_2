@@ -37,6 +37,15 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
 /* Navigation */
 .header-navigation {
     /* max-width: 100%; */
