@@ -9,7 +9,9 @@
     --accent-active: #503E33;
     --basic-white: #ffffff;
     --basic-black: #000000;
+    --background-decoration: rgba(219, 219, 219, 0.55);
     --text-color: #333333;
+    --footer: #2D2D2D;
     --active-text: rgba(255, 255, 255, 0.3);
 }
 /* Global */
@@ -73,6 +75,23 @@ img {
     color: #0B0B0B;
     position: relative;
 }
+/* Hide elements */
+.vissually-hiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance:none;
+      appearance: none;
+}
 
 /* Navigation */
 .header-navigation {
@@ -91,7 +110,7 @@ img {
 .link-navigation,
 .site-navigation {
     display: flex;
-    margin-left: auto;    
+    margin-left: auto;
 }
 .link-navigation {
     background: var(--primary-color);
@@ -220,4 +239,74 @@ img {
     text-decoration: none;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     border-radius: 27.5px;
+}
+
+
+/* News */
+.news {
+  margin: 110px 0 85px;
+}
+.news__title {
+  position: relative;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 9px;
+  margin-bottom: 100px;
+}
+.news__title:after {
+  position: absolute;
+  top: 50px;
+  right: calc(50% - 50px);
+  /* margin: 0 auto; */
+  content: "";
+  width: 98px;
+  height: 1px;
+  background-color: var(--basic-black);
+}
+.news__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  justify-content: center;
+}
+
+.news__item {
+  background-color: var(--background-decoration);
+  padding: 15px 0 0;
+}
+.news__content {
+  padding: 26px 30px 30px;
+}
+.news__content-title {
+  font-size: 18px;
+}
+/* Footer */
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--footer);
+}
+
+.footer__decoration {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: -1;
+}
+
+.footer-box {
+  display: flex;
+  color: var(--basic-white);
+  max-width: 1800px;
+}
+
+.footer__nav-list a{
+  color: var(--basic-white);
+  font-size: 18px;
 }
