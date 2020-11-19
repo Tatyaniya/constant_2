@@ -14,16 +14,29 @@
 }
 /* Global */
 body {
-    /* min-width: 1920px; */
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
     background-color: var(--primary-color);
 }
 
 .container {
-    width: 100%;
+    max-width: 1800px;
     margin: 0 auto;
-    /* padding: ; */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    color: #fff;
+    position: relative;
 }
 
 ul {
@@ -35,6 +48,30 @@ ul {
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.5s linear;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.link-more {
+    width: 132px;
+    height: 44px;
+    background: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 44px;
+    color: #0B0B0B;
+    position: relative;
 }
 
 /* Navigation */
@@ -102,6 +139,57 @@ p, h1, h2, h3, h4, h5, h6 {
 .search {
     border: none;
     background: #E5E3E3;
+}
+
+/*********   slider   **********/
+
+.hero__slide {
+    min-height: 86vh;
+}
+
+.hero__slide--1 {
+    background: url('../img/index/main-slide-1.jpg') no-repeat center center / cover;
+}
+
+.hero__slide--2 {
+    background: url('../img/index/main-slide-2.jpg') no-repeat center center / cover;
+}
+
+.hero__slide--3 {
+    background: url('../img/index/main-slide-3.jpg') no-repeat center center / cover;
+}
+
+.hero__slide--4 {
+    background: url('../img/index/main-slide-4.jpg') no-repeat center center / cover;
+}
+
+.hero__container {
+    padding-top: 15vh;
+}
+
+.hero__content {
+    position: relative;
+    padding-left: 15px;
+}
+
+.hero__content:before {
+    width: 873px;
+    height: 511px;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -200px;
+    background: url('../img/decor-header.svg') no-repeat center center / cover;
+}
+
+.hero__desc {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #fff;
+    position: relative;
 }
 
 /* SLider */
