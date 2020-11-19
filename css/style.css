@@ -4,7 +4,7 @@
     --primary-color: #F1F1F1;
     --primary-hover: #669EC0;
     --primary-active: #5496BD;
-    --accent-color: #766357;
+    --accent-color: #147536;
     --accent-hover: #604E43;
     --accent-active: #503E33;
     --basic-white: #ffffff;
@@ -22,6 +22,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 35px;
+    letter-spacing: 0.09em;
     background-color: var(--primary-color);
 }
 
@@ -244,11 +245,11 @@ img {
 
 /* News */
 .news {
-  margin: 110px 0 85px;
+  margin: 110px 0 0;
+  text-align: center;
 }
 .news__title {
   position: relative;
-  text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
   font-weight: 400;
@@ -270,6 +271,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px;
   justify-content: center;
+  text-align: left;
 }
 
 .news__item {
@@ -282,6 +284,19 @@ img {
 .news__content-title {
   font-size: 18px;
 }
+
+.news__show-more {
+  border: 1px solid var(--accent-color);
+  font-size: 20px;
+  background: #F6F6F6;
+  border: 1px solid rgba(20, 117, 54, 0.75);
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 27.5px;
+  padding: 11px 27px;
+  color: var(--basic-black);
+  margin: 85px auto;
+}
 /* Footer */
 .main-footer {
   display: flex;
@@ -292,7 +307,7 @@ img {
 
 .footer__decoration {
   position: absolute;
-  bottom: 10px;
+  bottom: 90px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -301,12 +316,24 @@ img {
 }
 
 .footer-box {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
   color: var(--basic-white);
-  max-width: 1800px;
+  padding: 58px 0;
+  width: 100%;
 }
 
-.footer__nav-list a{
+.footer-box a{
   color: var(--basic-white);
   font-size: 18px;
+}
+
+.footer__contacts-phones {
+  display: flex;
+}
+
+.footer__phones-wrapper {
+  display: flex;
+  flex-direction: column;
 }
