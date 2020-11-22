@@ -1,0 +1,31 @@
+.product-inner {
+  background: url(../img/index/drum-mowers-z.jpg) no-repeat center center / cover;
+  min-height: 80vh;
+}
+
+.product-inner__container {
+  padding-top: 50vh;
+}
+
+.product-inner__content {
+  position: relative;
+  padding: 60px 30px;
+  max-width: 715px;
+  text-transform: uppercase;
+}
+
+.product-inner__title {
+  z-index: 1;
+}
+
+.product-inner__title:before {
+  width: 905px;
+  height: 130px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  z-index: -1;
+  left: -140px;
+  background: url('../img/product-title-decoration.svg') no-repeat center center / cover;
+}

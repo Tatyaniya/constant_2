@@ -133,7 +133,7 @@ img {
 }
 
 .main-logo {
-    padding: 19px 0 10px 60px;
+    padding: 19px 0 10px 30px;
 }
 
 .fab {
@@ -410,6 +410,9 @@ img {
   background-color: var(--background-decoration);
   padding: 15px 0 0;
 }
+.news__item:hover {
+  cursor: pointer;
+}
 .news__content {
   padding: 26px 30px 30px;
 }
@@ -428,6 +431,16 @@ img {
   padding: 11px 27px;
   color: var(--basic-black);
   margin: 85px auto;
+}
+
+.news__show-more:hover,
+.news__show-more:focus{
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s linear;
+}
+.news__show-more:active {
+  color: var(--basic-white);
+  background: #147536;
 }
 /* Footer */
 .main-footer {
@@ -459,6 +472,10 @@ img {
 .footer-box a{
   color: var(--basic-white);
   font-size: 18px;
+}
+
+.footer__contacts {
+  margin-right: 50px;
 }
 
 .footer__contacts-phones {
