@@ -14,6 +14,7 @@
     --footer: #2D2D2D;
     --active-text: rgba(255, 255, 255, 0.3);
 }
+
 /* Global */
 body {
     margin: 0;
@@ -24,6 +25,11 @@ body {
     line-height: 35px;
     letter-spacing: 0.09em;
     background-color: var(--primary-color);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -48,11 +54,6 @@ ul {
     list-style: none;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
-
 a {
     display: inline-block;
     text-decoration: none;
@@ -75,7 +76,9 @@ img {
     line-height: 44px;
     color: #0B0B0B;
     position: relative;
+    border-radius: 27px;
 }
+
 /* Hide elements */
 .vissually-hiden {
   position: absolute;
@@ -165,6 +168,7 @@ img {
 
 .hero__slide {
     min-height: 86vh;
+    overflow: hidden;
 }
 
 .hero__slide--1 {
@@ -185,61 +189,189 @@ img {
 
 .hero__container {
     padding-top: 15vh;
+
 }
 
 .hero__content {
     position: relative;
-    padding-left: 15px;
+    padding-top: 80px;
 }
 
 .hero__content:before {
-    width: 873px;
-    height: 511px;
+    height: 512px;
     display: block;
     content: "";
     position: absolute;
     top: 0;
-    left: -200px;
-    background: url('../img/decor-header.svg') no-repeat center center / cover;
+    left: -240px;
+}
+
+.hero__content--1:before {
+    width: 873px;
+    background: url('../img/index/text-bg-1.svg') no-repeat center center / cover;
+}
+
+.hero__content--2:before {
+    width: 923px;
+    background: url('../img/index/text-bg-2.svg') no-repeat center center / cover;
+}
+
+.hero__content--3:before {
+    width: 949px;
+    height: 486px;
+    background: url('../img/index/text-bg-3.svg') no-repeat center center / cover;
+}
+
+.hero__content--4:before {
+    width: 949px;
+    height: 486px;
+    background: url('../img/index/text-bg-4.svg') no-repeat center center / cover;
+}
+
+.hero__title {
+    margin-bottom: 50px;
+}
+
+.hero__title .text-regular {
+    font-weight: 400;
 }
 
 .hero__desc {
+    max-width: 540px;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
     color: #fff;
     position: relative;
+    margin-bottom: 50px;
 }
 
-/* SLider */
-
-.slider-item {
-    background: url(../img/index/main-slide-1.jpg);
-    /* height: 100vh; */
+.slick-slide:focus {
+    outline: none;
 }
 
-.slider-item__information {
-    padding: 140px 0 0 72px;
-    height: 505px;
-    position: relative;
-    color: white;
-    background: url(../img/index/text-background.svg) no-repeat 0% 130px;
+.hero-prev,
+.hero-next {
+    width: 17px;
+    height: 30px;
+    position: absolute;
+    bottom: 110px;
+    right: 50px;
+    z-index: 30;
+    background: url('../img/index/arrow-slader-hero.png') no-repeat center center / cover;
+    cursor: pointer;
 }
 
-.slider-title {
-    font-size: 30px;
-    margin: 63px 0 53px;
+.hero-prev {
+    right: 85px;
+    transform: rotate(-180deg);
 }
 
-.slider-link {
-    display: inline-block;
-    padding: 14px 32px;
-    background-color: #F6F6F6;
-    color: #0B0B0B;
-    text-decoration: none;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 27.5px;
+.slick-dots {
+    width: 220px;
+    bottom: 58px;
+    right: 40px;
+}
+
+.slick-dots li {
+    width: 35px;
+    height: 6px;
+    margin: 0 10px;
+}
+
+.slick-dots li button {
+    width: 100%;
+    height: 100%;
+}
+
+.slick-dots li button:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: rgba(164, 164, 164, 0.59);
+    border-radius: 20px 0;
+}
+
+.slick-dots li.slick-active button:before {
+    background: #fff;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+/********** main-menu ************/
+
+.main-menu {
+    height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "a a b b" "a a b b" "c c d e" "c c f g";
+    padding-top: 20px;
+}
+
+.main-menu__item {
+    padding: 40px;
+}
+
+.main-menu__item--1 {
+    grid-area: a;
+    background: url('../img/index/hay-handling-equipment.jpg') no-repeat center center / cover;
+}
+
+.main-menu__item--2 {
+    grid-area: b;
+    background: url('../img/index/municipal-machines.jpg') no-repeat center center / cover;
+}
+
+.main-menu__item--3 {
+    grid-area: c;
+    background: url('../img/index/field machinery.jpg') no-repeat center center / cover;
+}
+
+.main-menu__item--4 {
+    grid-area: d;
+    background: url('../img/index/light.jpg') no-repeat center center / cover;
+}
+
+.main-menu__item--5 {
+    grid-area: e;
+    background: url('../img/index/service.jpg') no-repeat center center / cover;
+}
+
+.main-menu__item--6 {
+    grid-area: f;
+    background: url('../img/index/foto-video.jpg') no-repeat center center / cover;
+}
+
+.main-menu__item--7 {
+    grid-area: g;
+    background: url('../img/index/catalogues.jpg') no-repeat center center / cover;
+}
+
+.main-menu__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 32px;
+}
+
+.main-menu__desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+.main-menu__link {
+    width: 125px;
+    height: 42px;
+    line-height: 42px;
 }
 
 
